@@ -42,7 +42,9 @@ nav a {
 nav a:hover {
     color: var(--color-accent);
 }
-
+.logo-fygz {
+    width: 250px;
+}
 .title-section {
     display: flex;
     align-items: center;
