@@ -253,7 +253,7 @@ nav a:hover {
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 3rem;
   min-width: 220px;
 }
 
@@ -266,7 +266,10 @@ nav a:hover {
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: 800; 
 }
+
+
 
 .sidebar button:hover {
   background-color: #ff9e4d;
@@ -291,12 +294,12 @@ nav a:hover {
 .user-info {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 .avatar {
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--color-accent);
@@ -310,6 +313,7 @@ nav a:hover {
 /* Stats */
 .stats {
   display: flex;
+  justify-content: space-evenly;
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -319,6 +323,7 @@ nav a:hover {
   padding: 1.5rem;
   border-radius: 12px;
   min-width: 120px;
+  width: 250px;
   text-align: center;
 }
 
@@ -375,7 +380,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 4rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -405,4 +410,19 @@ footer {
 
 .footer-contact p {
     margin: 0.5rem 0;
+}
+
+
+/* Sticky layout */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mon board – FYGZ</title>
-    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
@@ -38,7 +38,6 @@
         <button>Voir ma collection</button>
       </aside>
 
-      <!-- CONTENU PRINCIPAL -->
       <section class="board-content">
         <!-- Statistiques -->
         <div class="stats">
@@ -57,21 +56,10 @@
         </div>
 
         <!-- Figurines -->
-        <div class="vitrine-section">
-          <!-- Tu peux boucler ici si tu fais du JS plus tard -->
-          <div class="vitrine-div">
-            <div class="img-wrapper">
-              <img src="../assets/img/fig-example.png" alt="Figurine">
-            </div>
-            <h2>Nom</h2>
-            <p>Univers</p>
-          </div>
-          <!-- Copie-colle autant de blocs que nécessaire -->
+        <div id="figurine-list" class="vitrine-section">
         </div>
       </section>
     </main>
-
-    <!-- FOOTER -->
     <footer>
       <div class="footer-container">
         <div class="footer-logo">
@@ -98,6 +86,7 @@
     </footer>
 
     <script src="../js/main.js"></script>
+    <script src="../js/board.js"></script>
   </body>
 
   </html>
