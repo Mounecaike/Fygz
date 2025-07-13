@@ -238,6 +238,100 @@ nav a:hover {
     text-decoration: underline;
 }
   
+/* === BOARD PAGE === */
+
+.board-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--color-dark);
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 220px;
+}
+
+.sidebar button {
+  padding: 1rem;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+  background-color: #ff9e4d;
+}
+
+.sidebar .locked {
+  background-color: #555;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.sidebar .locked .lock {
+  margin-left: 0.5rem;
+}
+
+/* Board content */
+.board-content {
+  flex: 1;
+}
+
+/* User top info */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-accent);
+}
+
+.username {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-block {
+  background-color: #1c1c1c;
+  padding: 1.5rem;
+  border-radius: 12px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.stat-block p {
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.stat-block strong {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+}
+
 /* Utils */
 main {
     padding: 2rem 1rem;
