@@ -1,0 +1,92 @@
+  <!DOCTYPE html>
+  <html lang="fr">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon board – FYGZ</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <div>
+          <div>
+            <a href="../pages/index.html">
+              <img class="logo-fygz" alt="logo fygz" src="../assets/logo/Logo_Fygz_horizontal.png" />
+            </a>
+          </div>
+          <div class="user-info">
+            <img class="avatar" src="../assets/img/avatar-jordan.png" alt="Avatar utilisateur">
+            <span class="username">Jordan</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="board-layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <button>Ajouter une figurine</button>
+        <button>Liste de souhait</button>
+        <button class="locked">
+          Estimation de ma figurine <span class="lock">🔒</span>
+        </button>
+        <button>Voir ma collection</button>
+      </aside>
+
+      <section class="board-content">
+        <!-- Statistiques -->
+        <div class="stats">
+          <div class="stat-block">
+            <p>Total Items</p>
+            <strong>17</strong>
+          </div>
+          <div class="stat-block">
+            <p>Valeur</p>
+            <strong>458 €</strong>
+          </div>
+          <div class="stat-block">
+            <p>Friends</p>
+            <strong>6</strong>
+          </div>
+        </div>
+
+        <!-- Figurines -->
+        <div id="figurine-list" class="vitrine-section">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="../assets/logo/Logo_Fygz_horizontal.png" alt="Logo FYGZ" />
+          <p>&copy; 2025 FYGZ - My Collection</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="#">Ma collection</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>Email : support@fygz.com</p>
+          <p>Discord : FYGZ#1234</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/board.js"></script>
+  </body>
+
+  </html>
