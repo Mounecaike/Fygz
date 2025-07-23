@@ -103,7 +103,9 @@ nav a:hover {
     align-items: center;
     transition: transform 0.2s ease-in-out;
 }
-
+.vitrine-div h2 {
+  margin-bottom: 0.5rem;
+}
 .vitrine-div:hover {
     transform: translateY(-5px);
 }
@@ -155,6 +157,10 @@ nav a:hover {
   }
   
   .explication-div article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     flex: 1 1 200px;
     padding: 1rem;
     background-color: #121212;
@@ -285,6 +291,129 @@ nav a:hover {
   margin-left: 0.5rem;
 }
 
+/* MODALE GENERALE */
+.modal {
+  display: none; /* Cachée par défaut */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenu */
+.modal-content {
+  background-color: #1c1c1c;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 400px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.2);
+  position: relative;
+}
+/* Container */
+.dropdown {
+  position: relative;
+  width: 100%;
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* Bouton sélectionné */
+.dropdown-selected {
+  background: #2a2a2a;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #444;
+}
+
+/* Liste déroulante */
+.dropdown-list {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #1c1c1c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  max-height: 10rem; /* ≈ 5 éléments visibles */
+  overflow-y: auto;
+  display: none; /* caché par défaut */
+  z-index: 1000;
+}
+
+/* Chaque option */
+.dropdown-option {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-option:hover {
+  background: #ff6600;
+  color: #fff; /* texte en blanc au survol */
+}
+
+/* Actif = ouvert */
+.dropdown.active .dropdown-list {
+  display: block;
+}
+/* Close button */
+.modal-content .close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.5rem;
+  color: #ff6600;
+  cursor: pointer;
+}
+
+/* Form */
+.modal-content label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content select {
+  width: 100%;           /* prend toute la largeur */
+  max-width: 100%;      /* limite si tu veux pas qu’il s’étire trop */
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: #fff;
+  appearance: none;      /* enlève le style natif (optionnel) */
+}
+
+.modal-content input, 
+.modal-content select {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.modal-content button {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--color-accent);
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
 /* Board content */
 .board-content {
   flex: 1;
@@ -311,6 +440,33 @@ nav a:hover {
 }
 
 /* Stats */
+
+.board-header {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-box {
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.stat-box h4 {
+  color: var(--color-accent);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
 .stats {
   display: flex;
   justify-content: space-evenly;
@@ -335,6 +491,29 @@ nav a:hover {
 .stat-block strong {
   font-size: 1.5rem;
   color: var(--color-accent);
+}
+
+
+/* Vitrine */
+.vitrine-div {
+  cursor: pointer;
+}
+
+.modal-content p {
+  margin: 0.5rem 0;
+  color: #ccc;
+}
+
+.modal-img-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.modal-img-wrapper img {
+  max-width: 200px;
+  border-radius: 8px;
+  border: 1px solid #333;
 }
 
 /* Utils */

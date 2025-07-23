@@ -1,0 +1,22 @@
+[
+  { "id": 1, "name": "Dragon Ball" },
+  { "id": 2, "name": "One Piece" },
+  { "id": 3, "name": "Naruto" },
+  { "id": 4, "name": "Demon Slayer" },
+  { "id": 5, "name": "Attack on Titan" },
+  { "id": 6, "name": "My Hero Academia" },
+  { "id": 7, "name": "Bleach" },
+  { "id": 8, "name": "Jujutsu Kaisen" },
+  { "id": 9, "name": "Hunter x Hunter" },
+  { "id": 10, "name": "Fairy Tail" },
+  { "id": 11, "name": "Black Clover" },
+  { "id": 12, "name": "Tokyo Revengers" },
+  { "id": 13, "name": "Fullmetal Alchemist" },
+  { "id": 14, "name": "Death Note" },
+  { "id": 15, "name": "Chainsaw Man" },
+  { "id": 16, "name": "One Punch Man" },
+  { "id": 17, "name": "Boruto" },
+  { "id": 18, "name": "Soul Eater" },
+  { "id": 19, "name": "Blue Exorcist" },
+  { "id": 20, "name": "Autre" }
+]

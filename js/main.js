@@ -50,4 +50,34 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-  
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const openModalBtn = document.getElementById("openModalBtn");
+  const modal = document.getElementById("figurineModal");
+  const closeModalBtn = document.getElementById("closeModalBtn");
+
+  // Ouvrir la modale
+  openModalBtn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+
+  // Fermer via le bouton X
+  closeModalBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fermer si clic en dehors
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Soumission du formulaire
+  const figurineForm = document.getElementById("figurineForm");
+  figurineForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Nouvelle figurine ajoutée !");
+    modal.style.display = "none";
+  });
+});

@@ -19,18 +19,43 @@
             </a>
           </div>
           <div class="user-info">
-            <img class="avatar" src="assets/img/avatar-jordan.png" alt="Avatar utilisateur">
+            <img class="avatar" src="assets/logo/avatar.png" alt="Avatar utilisateur">
             <span class="username">Jordan</span>
           </div>
         </div>
       </nav>
     </header>
-
     <!-- MAIN -->
     <main class="board-layout">
       <!-- SIDEBAR -->
       <aside class="sidebar">
-        <button>Ajouter une figurine</button>
+        <!-- Bouton qui ouvre la modale -->
+        <button id="openModalBtn" class="add-figurine-btn">Ajouter une figurine</button>
+
+        <!-- MODALE -->
+        <div id="figurineModal" class="modal">
+          <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h3>Ajouter une nouvelle figurine</h3>
+            <form id="figurineForm">
+              <label for="figName">Nom</label>
+              <input type="text" id="figName" required>
+              <label for="figCategory">Catégorie</label>
+                <div class="dropdown" id="dropdown-univers">
+                <div class="dropdown-selected">-- Choisir un univers --</div>
+                  <div class="dropdown-list">
+                    <!-- Les options seront injectées en JS -->
+                  </div>
+                </div>
+
+              <label for="figImage">Image</label>
+              <input type="file" id="figImage" accept="image/*">
+              
+              <button type="submit">Valider</button>
+            </form>
+          </div>
+        </div>
+
         <button>Liste de souhait</button>
         <button class="locked">
           Estimation de ma figurine <span class="lock">🔒</span>
@@ -40,24 +65,43 @@
 
       <section class="board-content">
         <!-- Statistiques -->
-        <div class="stats">
-          <div class="stat-block">
-            <p>Total Items</p>
-            <strong>17</strong>
+        <div class="board-header">
+          <div class="stat-box">
+            <h4>Total Items</h4>
+            <p id="stat-total">0</p>
           </div>
-          <div class="stat-block">
-            <p>Valeur</p>
-            <strong>458 €</strong>
+          <div class="stat-box">
+            <h4>Valeur</h4>
+            <p id="stat-value">0 €</p>
           </div>
-          <div class="stat-block">
-            <p>Friends</p>
-            <strong>6</strong>
+          <div class="stat-box">
+            <h4>Univers</h4>
+            <p id="stat-univers">0</p>
           </div>
         </div>
 
-        <!-- Figurines -->
-        <div id="figurine-list" class="vitrine-section">
+            <!-- Container figurines -->
+        <div id="figurine-list" class="vitrine-section"></div>
+
+      <!-- Modale de détails -->
+        <div id="figurineDetailsModal" class="modal">
+          <div class="modal-content">
+            <span id="closeDetailsModal" class="close">&times;</span>
+            
+            <!-- IMAGE -->
+            <div class="modal-img-wrapper">
+              <img id="detail-image" src="" alt="Image figurine" />
+            </div>
+
+            <!-- INFOS -->
+            <h3 id="detail-nom"></h3>
+            <p><strong>Univers :</strong> <span id="detail-univers"></span></p>
+            <p><strong>Prix :</strong> <span id="detail-prix"></span> €</p>
+            <p><strong>Date d'achat :</strong> <span id="detail-date"></span></p>
+            <p><strong>Lieu d'achat :</strong> <span id="detail-lieu"></span></p>
+          </div>
         </div>
+
       </section>
     </main>
     <footer>
