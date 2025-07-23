@@ -6,7 +6,7 @@ const fakeFigurines = [
     prix: 45.99,
     dateAchat: "2023-08-12",
     lieuAchat: "Micromania",
-    image: "../assets/img/goku-fygz.jpg"
+    image: "assets/img/goku-fygz.jpg"
   },
   {
     nom: "Ezio",
@@ -14,7 +14,7 @@ const fakeFigurines = [
     prix: 59.90,
     dateAchat: "2024-02-01",
     lieuAchat: "Amazon",
-    image: "../assets/img/ezio-fygz-jpg.jpg"
+    image: "assets/img/ezio-fygz-jpg.jpg"
   },
   {
     nom: "Tanjiro",
@@ -22,7 +22,7 @@ const fakeFigurines = [
     prix: 39.50,
     dateAchat: "2023-12-05",
     lieuAchat: "Fnac",
-    image: "../assets/img/tanjiro-fygz.png"
+    image: "assets/img/tanjiro-fygz.png"
   }
 ];
 
