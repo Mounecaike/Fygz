@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeModal = document.getElementById("closeDetailsModal");
 
   // Charger les figurines depuis JSON
-  fetch("../data/figurines.json")
+  fetch("data/figurines.json")
     .then(res => res.json())
     .then(figurines => {
       console.log("✅ Figurines JSON chargées:", figurines);
