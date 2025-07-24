@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dropdownList = dropdown?.querySelector(".dropdown-list");
 
   if (dropdown && dropdownSelected && dropdownList) {
-    fetch("../data/univers.json") // charge les univers
+    fetch("data/univers.json") // charge les univers
       .then(response => response.json())
       .then(universList => {
         universList.forEach(univers => {
